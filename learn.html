@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learn</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+        <!-- JsSocials social buttons -->
+        <link rel="stylesheet" href="./scripts/jssocials-1/jssocials.css"/>
+        <link rel="stylesheet" href="./scripts/jssocials-1/jssocials-theme-minima.css"/>
+
+        <!-- Animsition page transition -->
+        <link rel="stylesheet" href="./scripts/animsition/animsition.min.css">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="animsition">
+        <!-- Navigation bar -->
+
+        <!-- 
+            Code for navbar adapted from 
+            https://youtu.be/gXkqy0b4M5g
+            Accessed: Feb 28, 2022
+        -->
+        <nav>
+            <div class="logo-container">
+                <div class="logo-image">
+                    <a href="./index.html">
+                        <img src="./images/logo.jpeg" alt="Logo">
+                    </a>
+                </div>
+                
+                <div class="logo-nav">
+                    <h2>
+                        <a href="./index.html">Stockhome</a>
+                    </h2>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="./prices.html">Prices</a>
+                </li>
+                <li>
+                    <a href="./learn.html">Learn</a>
+                </li>
+                <li>
+                    <a href="./faq.html">FAQ</a>
+                </li>
+                <li>
+                    <a href="./about.html">About</a>
+                </li>
+            </ul>
+
+            <div class="burger">
+                <div class="num1"></div>
+                <div class="num2"></div>
+                <div class="num3"></div>
+            </div>
+        </nav>
+       
+        <main>
+            <h1 class="section-title">Learn</h1>
+
+            <!--
+                Code for styling tab feature adapted from 
+                https://www.w3schools.com/howto/howto_js_tabs.asp
+                Accessed: Feb 28, 2022 
+            -->
+
+            <!-- Tab Header -->
+            <div class="tab-header">
+                <button class="tablink active" onclick="openTab(event, 'basics-tab')">Stock Basics</button>
+                <button class="tablink" onclick="openTab(event, 'accounts-tab')">Account Types</button>
+                <button class="tablink" onclick="openTab(event, 'investment-tab')">Types of investments</button>
+            </div>
+
+            <!-- Stock Basics Tab -->
+            <div class="tab" id="basics-tab">
+                <h2 class="tab-title">Stock Basics</h2>
+
+                <em>Note, all information presented below comes from source <a class="ref-links" href="./references.html#reference9">[9]</a></em>
+
+                <p>When you invest in stock, you buy ownership shares in a company—also known as equity shares. Your return on investment, or what you get back in relation to what you put in, depends on the success or failure of that company. If the company does well and makes money from the products or services it sells, you expect to benefit from that success.</p>
+                <p>There are two main ways to make money with stocks:</p>
+            
+                <ol>
+                    <li><b class="important">Dividends:</b> When publicly owned companies are profitable, they can choose to distribute some of those earnings to shareholders by paying a dividend. You can either take the dividends in cash or reinvest them to purchase more shares in the company. Many retired investors focus on stocks that generate regular dividend income to replace income they no longer receive from their jobs. Stocks that pay a higher than average dividend are sometimes referred to as "income stocks".</li>
+                    <li><b class="important">Capital gains.</b> Stocks are bought and sold constantly throughout each trading day, and their prices change all the time. When a stock price goes higher than what you paid to buy it, you can sell your shares at a profit. These profits are known as capital gains. In contrast, if you sell your stock for a lower price than you paid to buy it, you've incurred a capital loss.</li>
+                </ol>
+                
+                <p>Both dividends and capital gains depend on the fortunes of the company—dividends as a result of the company's earnings and capital gains based on investor demand for the stock. Demand normally reflects the prospects for the company's future performance. Strong demand—the result of many investors wanting to buy a particular stock—tends to result in an increase in the stock's share price. On the other hand, if the company isn't profitable or if investors are selling rather than buying its stock, your shares may be worth less than you paid for them.</p>
+                <p>The performance of an individual stock is also affected by what's happening in the stock market in general, which is in turn affected by the economy as a whole. For example, if interest rates go up and you think you can make more money with bonds than you can with stock, you might sell off stock and use that money to buy bonds. If many investors feel the same way, the stock market as a whole is likely to drop in value, which in turn may affect the value of the investments you hold. Other factors, such as political uncertainty at home or abroad, energy or weather problems, or soaring corporate profits, also influence market performance.</p>
+                <p>However—and this is an important element of investing—at a certain point, stock prices will be low enough to attract investors again. If you and others begin to buy, stock prices tend to rise, offering the potential for making a profit. That expectation may breathe new life into the stock market as more people invest.</p>
+                <p>This cyclical pattern—specifically, the pattern of strength and weakness in the stock market and the majority of stocks that trade in the stock market—recurs continually, though the schedule isn't predictable. Sometimes, the market moves from strength to weakness and back to strength in only a few months. Other times, this movement, which is known as a full market cycle, takes years.</p>
+                <p>At the same time that the stock market is experiencing ups and downs, the bond market is fluctuating as well. That's why asset allocation, or including different types of investments in your portfolio, is such an important strategy: In many cases, the bond market is up when the stock market is down and vice versa. Your goal as an investor is to be invested in several categories of investments at the same time, so that some of your money will be in the category that's doing well at any given time.</p>
+            </div>
+
+            <!-- Account types tab-->
+            <div class="tab" id="accounts-tab">
+                <h2 class="tab-title">Different Accounts Types</h2>
+
+                <em>Note, all information presented below comes from source <a class="ref-links" href="./references.html#reference10">[10]</a></em>
+
+                <p>To purchase and sell securities, you need an investment account or plan to hold your cash and investments (stocks, bonds, ETFs, mutual funds etc.) You can open investment accounts through financial institutions and brokerages through their registered advisers and online.</p>
+                <p>You can use several types of accounts or plans in Canada that are broadly categorized as either “registered” (TFSAs, RRSPs, RESPs) or “non-registered” accounts for investing. Each has unique features and considerations, which you can learn more about in this section.</p>
+                
+                <h3 class="important">Non-registered account</h3>
+                <p>Non-registered investment accounts generally have no restrictions on how much you can contribute or withdraw from the account. Interest income in a non-registered account is taxed at your marginal tax rate, but includes special considerations for dividends and capital gains. Dividends from your investments are taxed on a gross amount but receive a dividend tax credit based on the province you live in. Capital gains in a non-registered account are taxed on a net basis, with your marginal rate paid on 50% of its value. Finally, any interest income generated in your non-registered account is fully taxable at your marginal tax rate.</p>
+                
+                <h3 class="important">Registered accounts</h3>
+                <p>Along with non-registered accounts, Canadians also have access to accounts and plans registered with the Canadian Revenue Agency that have unique features from one another to help you save or invest towards your financial goals. Learn more about these accounts and plans below:</p>
+                
+                <h4 class="important">Tax-Free Savings Account (TFSA)</h4>
+                <p>An account that allows you to save or invest a defined amount tax-free each year throughout your life.</p>
+                <p>While the name implies that a TFSA is simply a savings account, in actuality, it can be a very powerful tool to grow your wealth through investing. Since 2009, any Canadian over 18 became eligible to open a TFSA with a contribution limit that started at $5000. Since then, the Canadian Government has provided additional contribution room to all Canadians, which now totals at $75,500 in 2021 for those 18 and over, since its inception. Most types of investments can be held in a TFSA, including stocks, bonds, exchange-traded funds and mutual funds, but you should always check with your financial institution, dealer or portfolio manager before investing in something to make sure it is eligible.</p>
+                <p>The main benefit of a TFSA is that your investment gains within the account are all yours. When comparing it to a non-registered account, in which you would have to pay capital gains, dividend and investment income tax, the tax savings on your TFSA returns could be considerable over time.</p>
+            
+                <h4 class="important">Registered Retirement Savings Plan (RRSP)</h4>
+                <p>An account designed to reduce the income tax on the money you contribute towards your retirement.</p>
+                <p>Contributions made to your RRSP in your working years are deducted from your taxable income and, if invested, can grow tax-free while the funds stay in the account. Once in retirement, withdrawals from your RRSP will be taxed at your retirement income bracket, which should be less than in your working years. If your contributions are invested, an RRSP can help you grow your investments over time without the tax drag on your returns as you would experience in a non-registered investment account.</p>
+
+                <!-- Table about the different account types -->
+                <div class="table-mobile">
+                    <table id="account-table">
+                        <tr>
+                            <th>Non-registered Account</th>
+                            <th>TFSA Account</th>
+                            <th>RRSP Account</th>
+                        </tr>
+                        <tr>
+                            <!-- Non-registered account -->
+                            <td>
+                                <ul>
+                                    <li><b>Capital gains, domestic and foreign</b> - preferential capital gains tax when realized, capital losses can be deducted from capital gains.</li>
+                                    <li><b>Canadian corporate dividends</b> - preferential dividend tax treatment resulting in lower effective tax rates.</li>
+                                    <li><b>U.S. and foreign corporate dividends</b> - although foreign dividends are fully taxed like interest, foreign taxes withheld can qualify for the foreign tax credit.</li>
+                                </ul>
+                            </td>
+
+                            <!-- TFSA account -->
+                            <td>
+                                <ul>
+                                    <li><b>Canadian or U.S. interest</b> - bonds, GICs, T-bills, etc. that pay interest income (fully taxable outside a registered account). There is no withholding tax on interest paid from U.S. to Canada on most investments.</li>
+                                    <li><b>Capital Gains, domestic and foreign</b> - no capital gains tax when realized or when withdrawn, but also no capital loss deduction.</li>
+                                    <li><b>Canadian corporate dividends</b> - tax-free dividends in the TSA vs. preferential tax in a non-registered account. While you pay less tax on Canadian dividends in a non-registered account, you would pay no tax in the TFSA.</li>
+                                </ul>
+                            </td>
+
+                            <!-- RRSP account -->
+                            <td>
+                                <ul>
+                                    <li><b>Canadian or U.S. interest</b> - bonds. GICs. T-bills, etc. that pay interest income (fully taxable outside a registered account). The U.S. generally does not withhold tax on interest payments to Canada.</li>
+                                    <li><b>U.S. corporate dividends</b> - U.S. dividends received into an RRSP from U.S. corporations are exempt from U.S. withholding tax under the tax treaty between the U.S. and Canada. U.S. dividends are fully taxed like interest when held outside a registered account.</li>
+                                    <li><b>Capital gains</b> - capital gains are taxed at a preferential tax rate in a non-registered account, which is an advantage lost inside an RRSP. There is generally no withholding tax on capital gains from foreign countries.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><em>Note, all information presented in the table above comes from source <a class="ref-links" href="./references.html#reference11">[11]</a></em></td>
+                        </tr>
+                    </table>
+                </div>
+            
+            </div>
+
+            <!-- 
+                Code for tab feature adapted from 
+                https://www.w3schools.com/howto/howto_js_tabs.asp
+                Accessed: March 9, 2022
+            -->
+            <!-- Types of Investments Tab -->
+            <div class="tab" id="investment-tab">
+                <h2 class="tab-title">Different Types of Investment</h2>
+
+                <em>Note, all information presented below comes from source <a class="ref-links" href="./references.html#reference8">[8]</a></em>
+
+                <p>There are many different types of investments available to you, however some are more catered to suit your financial goals than others. They each have their own risk factor and set of features so it is important to know the difference between them. Below are the most popular types of investments, however there are many more available.</p>
+                
+                <h3 class="important">Stocks</h3>
+                <p>By investing in a stock, you are buying an ownership stake in a publicly traded company. Stocks represent ownership shares, which are also called equity shares. Making money off the stock depends on the success of the company, the overall market in general and could depend on other factors as well. Check the Stock Basics tab to learn more or click the link below.</p>
+                <a class="ref-links" href="https://www.finra.org/investors/learn-to-invest/types-investments/stocks/stock-basics" target="_blank">Learn more about stocks</a>
+                
+                <h3 class="important">Bonds</h3>
+                <p>A bond is a loan that an investor makes to a business, government entity or other type of organization. In return, the investor makes money off interest payments over a specified term length and when the bond matures — the specified amount of time passes — you get your principal back.</p>
+                <a class="ref-links" href="https://www.finra.org/investors/learn-to-invest/types-investments/bonds/bonds-basics" target="_blank">Learn more about bonds</a>
+            
+                <h3 class="important">Mutual Funds</h3>
+                <p>A mutual fund is a large sum of money coming from many different investors that is invested broadly in a number of companies and using a specific strategy. Mutual funds can either be actively managed or passively managed. Actively managed mutual funds have someone who decides what to invest the money in. Passively managed mutual funds simply track one of the major market indexes, such as the NASDAQ.</p>
+                <a class="ref-links" href="https://www.finra.org/investors/learn-to-invest/types-investments/investment-funds/mutual-funds" target="_blank">Learn more about mutual funds</a>
+            
+                <h3 class="important">Exchange-Traded Funds (ETFs)</h3>
+                <p>Exchange-traded funds are quite similar to mutual funds, as they too are a collection of investments that tracks a market index. Where they differ from mutual funds is that they are traded on the stock market, whereas mutual funds are purchased through a fund company.</p>
+                <a class="ref-links" href="https://www.finra.org/investors/learn-to-invest/types-investments/investment-funds/exchange-traded-fund" target="_blank">Learn more about ETFs</a>
+                
+                <h3 class="important">Even More Types</h3>
+                <p>There are many more types of investments available. For example, more advanced investors might prefer options due to the great return they can offer. Below is an excellent resource to learn more about the different types of investments.</p>
+                <a class="ref-links" href="https://www.finra.org/investors/learn-to-invest/types-investments" target="_blank">More Types of Investments</a>
+            </div>
+
+            <!-- Scroll to top button -->
+            <button class="scroll-top">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="back-to-top-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M7 11l5-5m0 0l5 5m-5-5v12"
+                    />
+                </svg>
+            </button>
+        </main>
+
+        <footer>
+            <div id="share"></div>
+
+            <div class="footer-para">
+                <p>Author: Andrei Albu</p>
+                <p>Last modification made on March 31, 2022</p>
+            </div>
+            <a href="./references.html">References</a>
+        </footer>
+
+        <!-- Javascript, JQuery and other plugins-->
+        
+        <script src="https://kit.fontawesome.com/7368c40b21.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="./scripts/jssocials-1/jssocials.js"></script>
+        
+
+        <!-- Smooth scroll -->
+
+        <!-- Must come after jQuery since it uses jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.js"></script>
+        <!-- Must come after ScrollTo since it uses ScrollTo -->
+        <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+
+
+        <!-- Animsition page transition -->
+        <script src="./scripts/animsition/animsition.min.js"></script>
+
+
+        <script src="./scripts/jquery.js"></script>
+        <script src="./scripts/nav.js"></script>
+        <script src="./scripts/script.js"></script>
+
+    </body>
+</html>
