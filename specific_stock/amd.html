@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Advanced Micro Devices, Inc.</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+        <!-- JsSocials social buttons -->
+        <link rel="stylesheet" href="../scripts/jssocials-1/jssocials.css"/>
+        <link rel="stylesheet" href="../scripts/jssocials-1/jssocials-theme-minima.css"/>
+
+        <!-- Animsition page transition -->
+        <link rel="stylesheet" href="../scripts/animsition/animsition.min.css">
+
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body class="animsition">
+        <!-- Navigation bar -->
+
+        <!-- 
+            Code for navbar adapted from 
+            https://youtu.be/gXkqy0b4M5g
+            Accessed: Feb 28, 2022
+        -->
+        <nav>
+            <div class="logo-container">
+                <div class="logo-image">
+                    <a href="../index.html">
+                        <img src="../images/logo.jpeg" alt="Logo">
+                    </a>
+                </div>
+                
+                <div class="logo-nav">
+                    <h2>
+                        <a href="../index.html">Stockhome</a>
+                    </h2>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="../prices.html">Prices</a>
+                </li>
+                <li>
+                    <a href="../learn.html">Learn</a>
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a>
+                </li>
+                <li>
+                    <a href="../about.html">About</a>
+                </li>
+            </ul>
+
+            <div class="burger">
+                <div class="num1"></div>
+                <div class="num2"></div>
+                <div class="num3"></div>
+            </div>
+        </nav>
+       
+        <main>
+            <!-- Navigation to previous/current pages -->
+            <section class="hierarchy">
+                <a class="ref-links" href="../prices.html">Prices</a>
+                <p>></p>
+                <a class="ref-links" href="./amd.html">AMD</a>
+            </section>
+
+            <h1 class="stock-title">Advanced Micro Devices, Inc.</h1>
+
+            <div class="stock-content">
+                <div class="stock-main">
+
+                    <!-- Stock chart -->
+                    <div class="stockchart-wrapper">
+                        <!-- 
+                            Code for stock chart copied from 
+                            https://www.tradingview.com/widget/advanced-chart/
+                            Accessed: Apr 5, 2022
+                        -->
+
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div id="basic-area-chart-demo"></div>
+                            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AMD" rel="noopener" target="_blank"><span class="blue-text">AMD Chart</span></a> by TradingView</div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                            <script type="text/javascript">
+                            new TradingView.widget(
+                                {
+                                    "container_id": "basic-area-chart-demo",
+                                    "width": "100%",
+                                    "height": "100%",
+                                    "autosize": true,
+                                    "symbol": "AMD",
+                                    "interval": "D",
+                                    "timezone": "exchange",
+                                    "theme": "light",
+                                    "style": "3",
+                                    "toolbar_bg": "#f1f3f6",
+                                    "hide_top_toolbar": true,
+                                    "save_image": false,
+                                    "locale": "en"
+                                }
+                            );
+                            </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+
+                    <!-- Top part containing stats and links -->
+                    <section class="stock-stats">
+                        <div class="stats">
+                            <!-- 
+                                Code for tooltips adapted from 
+                                https://www.w3schools.com/css/css_tooltip.asp
+                                Accessed: Mar 7, 2022
+                            -->
+                            <h3 class="stock-h3">Statistics</h3>
+                            <p>
+                                Ticker: AMD
+                                <div class="tooltip">?
+                                    <span class="tooltip-text">An abbreviation used to uniquely identify a particular stock on a particular stock market.</span>
+                                </div>
+                            </p>
+                            <br>
+                            <p>
+                                Price: $119.70
+                                <div class="tooltip">?
+                                    <span class="tooltip-text">Represents the current price that a stock is trading at.</span>
+                                </div>
+                            </p>
+                            <br>
+                            <p>
+                                Market Cap: $142.915B
+                                <div class="tooltip">?
+                                    <span class="tooltip-text">Refers to the total value of a company's outstanding shares.</span>
+                                </div>
+                            </p>
+                            <br>
+                            <p>
+                                Open: $117.19
+                                <div class="tooltip">?
+                                    <span class="tooltip-text">The price at which the stock begins trading when the market opens.</span>
+                                </div>
+                            </p>
+                            <br>
+                            <p>
+                                Prev Close: $114.27
+                                <div class="tooltip">?
+                                    <span class="tooltip-text">The price of a stock before the close of the last market.</span>
+                                </div>
+                            </p>
+                        </div>
+
+                        <div class="stock-links">
+                            <h3 class="stock-h3">External Links about AMD</h3>
+                            <a class="ref-links" href="https://www.amd.com/en" target="_blank">AMD's Homepage</a>
+                            <br>
+                            <a class="ref-links" href="https://en.wikipedia.org/wiki/Advanced_Micro_Devices" target="_blank">Wiki about AMD</a>
+                        </div>
+                    </section>
+
+                    <!-- About the company-->
+                    <section>
+                        <h2 class="stock-h2" id="about">About</h2>
+
+                        <em>Note, all information presented below comes from source <a class="ref-links" class="ref-links" class="ref-links" href="../references.html#reference3">[3]</a></em>
+
+                        <p>Advanced Micro Devices, Inc. (AMD) is an American multinational semiconductor company based in Santa Clara, California, that develops computer processors and related technologies for business and consumer markets. While it initially manufactured its own processors, the company later outsourced its manufacturing, a practice known as going fabless, after GlobalFoundries was spun off in 2009. AMD's main products include microprocessors, motherboard chipsets, embedded processors and graphics processors for servers, workstations, personal computers and embedded system applications.</p>
+
+                        <h3 id="history" class="stock-h3">History</h3>
+                        <p>Advanced Micro Devices was formally incorporated by Jerry Sanders, along with seven of his colleagues from Fairchild Semiconductor, on May 1, 1969. Sanders, an electrical engineer who was the director of marketing at Fairchild, had, like many Fairchild executives, grown frustrated with the increasing lack of support, opportunity, and flexibility within the company. He later decided to leave to start his own semiconductor company. Robert Noyce, who had developed the first silicon integrated circuit at Fairchild in 1959, had left Fairchild together with Gordon Moore and founded the semiconductor company Intel in July 1968. In 1972, they took AMD public and began making computer chips. In 1991, AMD introduced its first microprocessor, the Am386. In 1996, AMD launched its first x86 microprocessor designed entirely by them, called the K5. Additionally, 1996 was the year that they acquired NexGen, which cost them $857 million.</p>
+                        <p>AMD has come a long way from where it began. Currently, its biggest competitor is Intel — another semiconductor company — however recently AMD has shown more compelling improvements in their products.</p>
+                        
+                        <h3 id="products" class="stock-h3">Products</h3>
+                        <p>AMD specializes in manufacturing microprocessors, specifically central processing units or CPUs. They provide CPUs for both personal, and enterprise use. AMD also produces graphics products and graphics processing units or GPUs.</p>
+                        <p>An interesting fact is that both the Xbox and Playstation consoles use AMD’s custom processors.</p>
+                    </section>
+                </div>
+
+                <!-- Side menu containing headings -->
+                <section class="sidemenu">
+                    <h2>Jump To</h2>
+                    <h3><a class="ref-links" href="#about">About</a></h3>
+                    <h3><a class="ref-links" href="#history">History</a></h3>
+                    <h3><a class="ref-links" href="#products">Products</a></h3>
+
+                    <!-- 
+                        Code for twitter integration copied from 
+                        https://publish.twitter.com/
+                        Accessed: Apr 5, 2022
+                    -->
+                    <div class="twitter-wrapper">
+                        <a class="twitter-timeline" data-height="500px" data-width="100vw" data-theme="light" href="https://twitter.com/AMD?ref_src=twsrc%5Etfw">Tweets by AMD</a> 
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>                        
+                    </div>
+                </section>
+            </div>
+
+            <!-- Scroll to top button -->
+            <button class="scroll-top">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="back-to-top-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M7 11l5-5m0 0l5 5m-5-5v12"
+                    />
+                </svg>
+            </button>
+        </main>
+
+        <footer>
+            <div id="share"></div>
+            
+            <div class="footer-para">
+                <p>Author: Andrei Albu</p>
+                <p>Last modification made on March 31, 2022</p>
+            </div>
+            <a href="../references.html">References</a>
+        </footer>
+
+
+        <!-- Javascript, JQuery and other plugins -->
+        
+        <!-- JQuery for social media buttons -->
+        <script src="https://kit.fontawesome.com/7368c40b21.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="../scripts/jssocials-1/jssocials.js"></script>
+        
+
+        <!-- Smooth scroll -->
+
+        <!-- Must come after jQuery since it uses jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.js"></script>
+        <!-- Must come after ScrollTo since it uses ScrollTo -->
+        <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+
+        
+        <!-- Animsition page transition -->
+        <script src="../scripts/animsition/animsition.min.js"></script>
+        
+        
+        <script src="../scripts/nav.js"></script>
+        <script src="../scripts/jquery.js"></script>
+
+    </body>
+</html>

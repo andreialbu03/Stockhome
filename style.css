@@ -1,0 +1,823 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Variables */
+
+:root {
+    --ff-main: 'Montserrat', sans-serif;
+	
+    --fs-h1: 3rem;
+	--fs-h2: 2.25rem;
+	--fs-h3: 1.25rem;
+	--fs-body: 1.1rem;
+
+	--clr-light: #fff;
+	--clr-dark: #2A2D34;
+	--clr-accent: #004FFF;
+    --clr-light-grey: #D3D3D3;
+    --clr-dark-grey: #606060;
+	
+    --box-shad: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+
+/* General Style */
+
+html {
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    font-family: var(--ff-main);
+    font-size: var(--fs-body);
+    background: var(--clr-light);
+    margin: 0;
+    color: var(--clr-dark);
+    line-height: 1.6;
+}
+
+section {
+	padding: 3em 2em;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+button {
+    font-family: inherit;
+    font-size: 0.9em;
+}
+
+.main-section {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--clr-accent);
+    font-size: var(--fs-h1);
+}
+
+section .text-content {
+    text-align: center;
+}
+
+/* 
+* Code for styling ref-links class adapted from 
+* https://speckyboy.com/creative-hyperlinks-css-javascript/
+* example #3 coming up short
+* Accessed: Feb 28, 2022 
+*/
+
+.ref-links {
+    text-decoration: none;
+    color: var(--clr-accent);
+    margin: 0 2px;
+    position: relative;
+}
+
+.ref-links:before {
+    position: absolute;
+    margin: 0 auto;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-accent);
+    content: '';
+    opacity: .3;
+    -webkit-transform: scaleX(.9);
+    transition-property: opacity, -webkit-transform;
+    transition-duration: .15s;
+}
+
+.ref-links:hover:before {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+}
+
+
+/* Navbar */
+
+/* 
+* Code for styling the navbar adapted from 
+* https://youtu.be/gXkqy0b4M5g
+* Accessed: Feb 28, 2022 
+*/
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.logo-image {
+    flex-basis: 20%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--clr-light);
+    border-bottom: 1px solid var(--clr-dark);
+}
+
+.logo-nav {
+    letter-spacing: 2px;
+    font-size: 22px;
+    padding-left: 1em;
+}
+
+.logo-nav h2 a {
+    text-decoration: none;
+    color: var(--clr-accent);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: var(--clr-dark);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--clr-dark);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        border-bottom: none;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--clr-light);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 9;
+    }
+    
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .num1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .num2 {
+    opacity: 0;
+}
+.toggle .num3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* Tables */
+
+table {
+    border: 1px solid var(--clr-light-grey);
+    border-radius: 8px;
+    margin: auto;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    font-size: var(--fs-h3);
+    font-weight: 900;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(245, 245, 245)
+}
+
+.section-table {
+    overflow-x:auto;
+}
+
+
+/* Footer */
+
+footer {
+    font-size:0.8em;
+    text-align: center;
+    color: var(--clr-dark-grey);
+}
+
+.footer-para {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-para p {
+    padding: 0.5em;
+}
+
+footer a {
+    margin: auto;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+footer a:link{
+    color: var(--clr-dark-grey);
+}
+
+footer a:visited {
+    text-decoration: none;
+    color: var(--clr-dark-grey);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--clr-accent);
+}
+
+footer a:active {
+    color: var(--clr-dark);
+}
+
+
+/* Home page */
+
+.logo-banner {
+    padding: 0;
+    max-width: 35%;
+    padding-left: 3em;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo-banner {
+        max-width: 100%;
+    }
+}
+
+a.button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.75em 2em;
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-size: 0.85rem;  
+    transition: transform 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+
+/* FAQ page */
+
+/* 
+* Code for styling accordion adapted from 
+* https://www.w3schools.com/howto/howto_js_accordion.asp
+* Accessed: Mar 9, 2022 
+*/
+
+.accordion {
+    background-color: #f3f3f3;
+    color: var(--clr-accent);
+    padding: 2em;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    cursor: pointer;
+    font-size: var(--fs-body); 
+}
+
+.active, .accordion:hover {
+    background-color: #d6d6d6;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+
+/* About page */
+
+/* 
+* Code for styling the text and image in the about us page adapted from 
+* https://youtu.be/S0a7PEOi0do
+* Accessed: March 3, 2022 
+*/
+
+.about-us {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.about-us > * {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+.about-img {
+    margin: auto;
+    min-width: 50%;
+}
+
+.about-img > img {
+    box-shadow: var(--box-shad);
+}
+
+@media all and (min-width: 768px) {
+    .about-text {
+        order:1;
+    }
+    .about-img {
+        order:2;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .about-text, .about-img  {
+        flex: 1;
+    }
+}
+
+.contact-form-container {
+    padding-bottom: 0;
+}
+
+form {
+	max-width: 550px;
+	width: 90%;
+	background-color: var(--clr-light);
+	margin: 0vh auto 0 auto;
+	padding: 40px;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+
+.contact-header {
+    margin: 0;
+    text-align: center;
+    color: var(--clr-accent);
+    font-size: var(--fs-h2);
+}
+
+label {
+    display: block;
+    margin: 20px 0;
+}
+
+input, textarea {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+	resize: none;
+	border: none;
+	border-bottom: 1px solid var(--clr-light-grey);
+}
+
+textarea,
+input[type=text] {
+    font-family: var(--ff-main);
+}
+
+textarea::webkit-scrollbar {
+	width: 4px;
+}
+
+.center {
+	text-align: center;
+}
+
+input[type="submit"] {
+	margin-top: 30px;
+	width: 90%;
+	max-width: 200px;
+    background: #004fff;
+	color: var(--clr-light);
+	font-size: 17px;
+	cursor: pointer;
+	border-radius: 3px;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+.error {
+	color: red;
+}
+
+.show-error {
+	border-bottom: 1px solid red;
+}
+
+#success {
+	color: #4BB543;
+}
+
+
+/* Learn Page */
+
+/* Tab feature */
+
+/*
+*   Code for tab feature adapted from 
+*   https://www.w3schools.com/howto/howto_js_tabs.asp
+*   Accessed: March 9, 2022
+*/
+
+/* Styling header with buttons*/
+.tab-header {
+    overflow: hidden;
+    border: 1px solid var(--clr-light-grey);
+    background-color: #f7f7f7;
+}
+  
+/* Styling the buttons */
+.tab-header button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1em 1em;
+    transition: 0.3s;
+}
+
+.tab-header button:hover {
+    background-color: #ddd;
+}
+
+.tab-header button.active {
+    background-color: var(--clr-light-grey);
+}
+
+/* Tab content */
+.tab {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid var(--clr-light-grey);
+    border-top: none;
+}
+
+/* Ensure basics section is open by default */
+.tab#basics-tab {
+    display: block;
+}
+
+/* Tab content*/
+
+.tab-title {
+    font-style: var(--fs-h2);
+    color: var(--clr-accent);
+}
+
+.important {
+    color: var(--clr-accent);
+}
+
+/* Table for mobile */
+
+/* 
+* Code for styling the table for mobile copied from 
+* https://www.studytonight.com/post/how-to-make-table-horizontally-scrollable-for-small-screen-size
+* Accessed: Mar 2, 2022 
+*/
+@media (max-width: 600px) {
+    .table-mobile {
+        overflow-x: scroll;
+    }
+
+    .table-mobile th, td {
+        border-collapse: collapse;
+        min-width: 200px;
+    }
+}
+
+
+/* Specific Stock Pages */
+
+.hierarchy > * {
+    display: inline-block;
+    font-size: 0.85em;
+}
+
+.hierarchy {
+    padding: 4%;
+    padding-bottom: 0;
+}
+
+.stock-title {
+    color: var(--clr-accent);
+    font-size: var(--fs-h1); 
+    padding: 4%;
+    margin-top: 0;
+    padding-top: 0;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+/* 
+* Code for styling the sticky sidemenu adapted from 
+* https://dev.to/clairecodes/how-to-make-a-sticky-sidebar-with-two-lines-of-css-2ki7
+* Accessed: Mar 7, 2022 
+*/
+
+.stock-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+  }
+  
+.stock-main,.sidemenu {
+    border: 2px solid var(--clr-light-grey);
+    border-radius: 8px;
+}
+
+.stock-main {
+    width: 70%;
+}
+
+.stock-main > * {
+    padding-top: 0;
+}
+
+.sidemenu {
+    width: 25%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 16em;
+    /* height: 80%; */
+    padding-top: 0;
+    min-width: 10em;
+    text-align: center;
+}
+
+.sidemenu > h3 > a {
+    color: var(--clr-dark);
+}
+
+.sidemenu > h2 {
+    color: var(--clr-accent);
+}
+
+.stats > p {
+    display: inline;
+}
+
+.stock-stats {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 2px solid var(--clr-light-grey);
+}
+
+.stock-stats > * {
+    flex: 1 100%;
+}
+
+@media all and (min-width: 768px) {
+    .stats {
+        order:1;
+    }
+    .stock-links {
+        order:2;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .stats, .stock-links  {
+        flex: 1;
+    }
+}
+
+/* 
+* Code for styling the tooltips adapted from 
+* https://www.w3schools.com/css/css_tooltip.asp
+* Accessed: Mar 7, 2022 
+*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: var(--clr-accent);
+}
+
+.tooltip:before {
+    position: absolute;
+    margin: 0 auto;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-accent);
+    content: '';
+    opacity: .3;
+    -webkit-transform: scaleX(.9);
+    transition-property: opacity, -webkit-transform;
+    transition-duration: .15s;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 220px;
+    background-color: var(--clr-light);
+    color: var(--clr-accent);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    border: 2px solid var(--clr-dark-grey);
+
+    /* Position of tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+}
+
+.tooltip:hover:before {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+}
+
+.stock-h3 {
+    color: var(--clr-accent);
+    font-size: var(--fs-h3);
+}
+
+.stock-h2 {
+    color: var(--clr-accent);
+    font-size: var(--fs-h2);
+}
+
+.stock-links > a{
+    color: var(--clr-dark);
+}
+
+
+/* References Page */
+
+.main-section.reference-section {
+    text-align: left;
+} 
+
+/* 
+* Code for styling child <a> of reference-section class adapted from 
+* https://speckyboy.com/creative-hyperlinks-css-javascript/
+* example #3 coming up short
+* Accessed: Mar 8, 2022 
+*/
+
+.reference-section a {
+    text-decoration: none;
+    color: var(--clr-accent);
+    margin: 0 2px;
+    position: relative;
+}
+
+.reference-section a:before {
+    position: absolute;
+    margin: 0 auto;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-accent);
+    content: '';
+    opacity: .3;
+    -webkit-transform: scaleX(.9);
+    transition-property: opacity, -webkit-transform;
+    transition-duration: .15s;
+}
+
+.reference-section a:hover:before {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+}
+
+
+/* Scroll to top button */
+
+.scroll-top {
+    position: fixed;
+    border-radius: 100%;
+    bottom: 3em;
+    right: 3em;
+    background: var(--clr-dark);
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    z-index: 1000;
+    display: none;
+}
+
+.back-to-top-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #74caff;
+}
+
+
+/* Stock charts */
+
+.stockchart-wrapper {
+    padding: 2em;
+    padding-bottom: 1em;
+    height: 600px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .stockchart-wrapper {
+        height: 400px;
+    }
+}
+
+.stockchart-wrapper.indexchart-wrapper {
+    padding: 0;
+    padding-bottom: 2em;
+}
+
+
+/* Twitter embedded timeline */
+
+.twitter-wrapper {
+    padding-top: 3em;
+    padding-bottom: 0;
+    text-align: center;
+}

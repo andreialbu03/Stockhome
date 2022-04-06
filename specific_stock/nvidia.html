@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NVIDIA Corporation</title>
+
+        <!--- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+        <!-- JsSocials social buttons -->
+        <link rel="stylesheet" href="../scripts/jssocials-1/jssocials.css"/>
+        <link rel="stylesheet" href="../scripts/jssocials-1/jssocials-theme-minima.css"/>
+
+        <!-- Animsition page transition -->
+        <link rel="stylesheet" href="../scripts/animsition/animsition.min.css">
+            
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body class="animsition">
+        <!-- Navigation bar -->
+
+        <!-- 
+            Code for navbar adapted from 
+            https://youtu.be/gXkqy0b4M5g
+            Accessed: Feb 28, 2022
+        -->
+        <nav>
+            <div class="logo-container">
+                <div class="logo-image">
+                    <a href="../index.html">
+                        <img src="../images/logo.jpeg" alt="Logo">
+                    </a>
+                </div>
+                
+                <div class="logo-nav">
+                    <h2>
+                        <a href="../index.html">Stockhome</a>
+                    </h2>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="../prices.html">Prices</a>
+                </li>
+                <li>
+                    <a href="../learn.html">Learn</a>
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a>
+                </li>
+                <li>
+                    <a href="../about.html">About</a>
+                </li>
+            </ul>
+
+            <div class="burger">
+                <div class="num1"></div>
+                <div class="num2"></div>
+                <div class="num3"></div>
+            </div>
+        </nav>
+       
+        <main>
+            <!-- Navigation to previous/current pages -->
+            <section class="hierarchy">
+                <a class="ref-links" href="../prices.html">Prices</a>
+                <p>></p>
+                <a class="ref-links" href="./nvidia.html">NVIDIA</a>
+            </section>
+
+            <h1 class="stock-title">NVIDIA Corporation</h1>
+
+            <div class="stock-content">
+                <div class="stock-main">
+
+                    <!-- Stock chart -->
+                    <div class="stockchart-wrapper">
+                        <!-- 
+                            Code for stock chart copied from 
+                            https://www.tradingview.com/widget/advanced-chart/
+                            Accessed: Apr 5, 2022
+                        -->
+
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div id="basic-area-chart-demo"></div>
+                            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-NVDA/" rel="noopener" target="_blank"><span class="blue-text">NVDA Chart</span></a> by TradingView</div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                            <script type="text/javascript">
+                            new TradingView.widget(
+                                {
+                                    "container_id": "basic-area-chart-demo",
+                                    "width": "100%",
+                                    "height": "100%",
+                                    "autosize": true,
+                                    "symbol": "NASDAQ:NVDA",
+                                    "interval": "D",
+                                    "timezone": "exchange",
+                                    "theme": "light",
+                                    "style": "3",
+                                    "toolbar_bg": "#f1f3f6",
+                                    "hide_top_toolbar": true,
+                                    "save_image": false,
+                                    "locale": "en"
+                                }
+                            );
+                            </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+
+                    <!-- Top part containing stats and links -->
+                    <section class="stock-stats">
+                        <div class="stats">
+                            <!-- 
+                                Code for tooltips adapted from 
+                                https://www.w3schools.com/css/css_tooltip.asp
+                                Accessed: Mar 7, 2022
+                            -->
+                            <h3 class="stock-h3">Statistics</h3>
+                            <p>
+                                Ticker: NVDA
+                                <div class="tooltip">?
+                                    <span class="tooltip-text">An abbreviation used to uniquely identify a particular stock on a particular stock market.</span>
+                                </div>
+                            </p>
+                            <br>
+                            <p>
+                                Price: $236.42
+                                <div class="tooltip">?
+                                    <span class="tooltip-text">Represents the current price that a stock is trading at.</span>
+                                </div>
+                            </p>
+                            <br>
+                            <p>
+                                Market Cap: $589.159B
+                                <div class="tooltip">?
+                                    <span class="tooltip-text">Refers to the total value of a company's outstanding shares.</span>
+                                </div>
+                            </p>
+                            <br>
+                            <p>
+                                Open: $246.68
+                                <div class="tooltip">?
+                                    <span class="tooltip-text">The price at which the stock begins trading when the market opens.</span>
+                                </div>
+                            </p>
+                            <br>
+                            <p>
+                                Prev Close: $245.07
+                                <div class="tooltip">?
+                                    <span class="tooltip-text">The price of a stock before the close of the last market.</span>
+                                </div>
+                            </p>
+                        </div>
+
+                        <div class="stock-links">
+                            <h3 class="stock-h3">External Links about Nvidia</h3>
+                            <a class="ref-links" href="https://www.nvidia.com/en-us/" target="_blank">Nvidia's Homepage</a>
+                            <br>
+                            <a class="ref-links" href="https://en.wikipedia.org/wiki/Nvidia" target="_blank">Wiki about Nvidia</a>
+                        </div>
+                    </section>
+
+                    <!-- About the company-->
+                    <section>
+                        <h2 class="stock-h2" id="about">About</h2>
+
+                        <em>Note, all information presented below comes from source <a class="ref-links" href="../references.html#reference4">[4]</a></em>
+
+                        <p>Nvidia Corporation is an American multinational technology company incorporated in Delaware and based in Santa Clara, California. It designs graphics processing units (GPUs) for the gaming and professional markets, as well as system on a chip units (SoCs) for the mobile computing and automotive market. Its primary GPU line, labeled "GeForce", is in direct competition with the GPUs of the "Radeon" brand by Advanced Micro Devices (AMD). Nvidia expanded its presence in the gaming industry with its handheld game consoles Shield Portable, Shield Tablet, and Shield Android TV and its cloud gaming service GeForce Now. Its professional line of GPUs are used in workstations for applications in such fields as architecture, engineering and construction, media and entertainment, automotive, scientific research, and manufacturing design.</p>
+                        
+                        <h3 class="stock-h3" id="history">History</h3>
+                        <p>In 1993, the three co-founders believed that the proper direction for the next wave of computing was accelerated or graphics-based computing because it could solve problems that general-purpose computing could not. They also observed that video games were simultaneously one of the most computationally challenging problems and would have incredibly high sales volume. Video games became the company's flywheel to reach large markets and funding huge R&D to solve massive computational problems. With only $40,000 in the bank, the company was born. The company subsequently received $20 million of venture capital funding from Sequoia Capital and others. Nvidia initially had no name and the co-founders named all their files NV, as in "next version". The need to incorporate the company prompted the co-founders to review all words with those two letters, leading them to "invidia", the Latin word for "envy". Nvidia went public on January 22, 1999.</p>
+                        
+                        <h3 class="stock-h3" id="products">Products</h3>
+                        <p>Nvidia's family includes graphics, wireless communication, PC processors, and automotive hardware/software.</p>
+                        <p>Some families are listed below:</p>
+
+                        <ul>
+                            <li>GeForce, consumer-oriented graphics processing products</li>
+                            <li>Nvidia RTX, professional visual computing graphics processing products (replacing Quadro)</li>
+                            <li>NVS, multi-display business graphics solution</li>
+                            <li>Tegra, a system on a chip series for mobile devices</li>
+                            <li>Tesla, dedicated general-purpose GPU for high-end image generation applications in professional and scientific fields</li>
+                            <li>nForce, a motherboard chipset created by Nvidia for Intel (Celeron, Pentium and Core 2) and AMD (Athlon and Duron) microprocessors</li>
+                            <li>Nvidia GRID, a set of hardware and services by Nvidia for graphics virtualization</li>
+                            <li>Nvidia Shield, a range of gaming hardware including the Shield Portable, Shield Tablet and, most recently, the Shield Android TV</li>
+                            <li>Nvidia Drive automotive solutions, a range of hardware and software products for designers and manufacturers of autonomous vehicles. The Drive PX-series is a high performance computer platform aimed at autonomous driving through deep learning, while Driveworks is an operating system for driverless cars.</li>
+                            <li>BlueField, a range of Data Processing Units, initially inherited from their acquisition of Mellanox Technologies</li>
+                            <li>Nvidia Datacenter/Server class CPU, codenamed Nvidia Grace, coming in 2023</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Side menu containing headings -->
+                <section class="sidemenu">
+                    <h2>Jump To</h2>
+                    <h3><a class="ref-links" href="#about">About</a></h3>
+                    <h3><a class="ref-links" href="#history">History</a></h3>
+                    <h3><a class="ref-links" href="#products">Products</a></h3>
+
+                    <!-- 
+                        Code for twitter integration copied from 
+                        https://publish.twitter.com/
+                        Accessed: Apr 5, 2022
+                    -->
+                    <div class="twitter-wrapper">
+                        <a class="twitter-timeline" data-height="500px" data-width="100vw" data-theme="light" href="https://twitter.com/nvidia?ref_src=twsrc%5Etfw">Tweets by nvidia</a> 
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>   
+                    </div>
+                </section>
+            </div>
+
+            <!-- Scroll to top button -->
+            <button class="scroll-top">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="back-to-top-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M7 11l5-5m0 0l5 5m-5-5v12"
+                    />
+                </svg>
+            </button>
+        </main>
+
+        <footer>
+            <div id="share"></div>
+
+            <div class="footer-para">
+                <p>Author: Andrei Albu</p>
+                <p>Last modification made on March 31, 2022</p>
+            </div>
+            <a href="../references.html">References</a>
+        </footer>
+        
+
+        <!-- Javascript, JQuery and other plugins -->
+        
+        <!-- JQuery for social media buttons -->
+        <script src="https://kit.fontawesome.com/7368c40b21.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="../scripts/jssocials-1/jssocials.js"></script>
+        
+
+        <!-- Smooth scroll -->
+
+        <!-- Must come after jQuery since it uses jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.js"></script>
+        <!-- Must come after ScrollTo since it uses ScrollTo -->
+        <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+
+
+        <!-- Animsition page transition -->
+        <script src="../scripts/animsition/animsition.min.js"></script>
+
+
+        <script src="../scripts/nav.js"></script>
+        <script src="../scripts/jquery.js"></script>
+
+    </body>
+</html>
