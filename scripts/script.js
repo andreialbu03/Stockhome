@@ -1,6 +1,3 @@
-/* UNIT 5 WORK */
-
-
 // TAB FEATURE FOR THE LEARN PAGE
 
 // Function for the tab feature on the Learn Page
@@ -72,50 +69,6 @@ const success = document.getElementById("success");
 
 const inputs = [userName, email, subject, message];
 
-// Function called each time the contact form is submitted
-function validateForm() 
-{  
-    clearMessages();
-    var error = false;
-
-    // Conditionals to check various form fields
-    if (userName.value.length == 0) 
-    {
-        // call the showError function and pass in the element and the index of the error_list array
-        showError(userName, 0);
-        error = true;
-    }
-
-    if (email.value.length == 0) 
-    {
-        showError(email, 1);
-        error = true;
-    }
-    else if (!checkEmail()) 
-    {
-        showError(email, 1,  true);
-        error = true;
-    }
-
-    if (subject.value.length == 0) 
-    {
-        showError(subject, 2);
-        error = true;
-    }
-
-    if (message.value.length == 0) 
-    {
-        showError(message, 3);
-        error = true;
-    }
-
-    // If no errors are fouund, display success message
-    if (!error) 
-    {
-        success.textContent = "Thanks for your message!";
-    }
-}
-
 
 // Function to display error messages
 function showError(element, id, invalid_email=false) 
@@ -184,3 +137,68 @@ function checkEmail()
 
     return false;
 }
+
+
+// Function called each time the contact form is submitted
+function validateForm(event) 
+{  
+    event.preventDefault();
+    
+    clearMessages();
+    var error = false;
+
+    // Conditionals to check various form fields
+    if (userName.value.length == 0) 
+    {
+        // call the showError function and pass in the element and the index of the error_list array
+        showError(userName, 0);
+        error = true;
+    }
+
+    if (email.value.length == 0) 
+    {
+        showError(email, 1);
+        error = true;
+    }
+    else if (!checkEmail()) 
+    {
+        showError(email, 1,  true);
+        error = true;
+    }
+
+    if (subject.value.length == 0) 
+    {
+        showError(subject, 2);
+        error = true;
+    }
+
+    if (message.value.length == 0) 
+    {
+        showError(message, 3);
+        error = true;
+    }
+
+    // If no errors are found, display success message and send the email
+    if (!error) 
+    {
+        success.textContent = "Thanks for your message!";
+
+        // Generate a random five digit number as the case number, used for the case_number variable
+        this.case_number.value = Math.random() * 100000 | 0;
+
+        // Send the email
+        emailjs.sendForm('service_97tvjxb', 'contact_form', this)
+            .then(function() {
+                console.log('SUCCESS! Email sent.');
+                document.getElementById('contact-form').reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+        
+    }
+}
+
+// Add an event listener to the submit button of the form and call the validateForm function once clicked
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', validateForm);
+};

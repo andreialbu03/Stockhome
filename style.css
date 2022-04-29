@@ -68,13 +68,6 @@ section .text-content {
     text-align: center;
 }
 
-/* 
-* Code for styling ref-links class adapted from 
-* https://speckyboy.com/creative-hyperlinks-css-javascript/
-* example #3 coming up short
-* Accessed: Feb 28, 2022 
-*/
-
 .ref-links {
     text-decoration: none;
     color: var(--clr-accent);
@@ -104,12 +97,6 @@ section .text-content {
 
 
 /* Navbar */
-
-/* 
-* Code for styling the navbar adapted from 
-* https://youtu.be/gXkqy0b4M5g
-* Accessed: Feb 28, 2022 
-*/
 
 .logo-container {
     display: flex;
@@ -156,6 +143,11 @@ nav {
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--clr-accent);
+    text-shadow: 0 0 1px;
 }
 
 .burger {
@@ -334,12 +326,6 @@ a.button {
 
 /* FAQ page */
 
-/* 
-* Code for styling accordion adapted from 
-* https://www.w3schools.com/howto/howto_js_accordion.asp
-* Accessed: Mar 9, 2022 
-*/
-
 .accordion {
     background-color: #f3f3f3;
     color: var(--clr-accent);
@@ -365,12 +351,6 @@ a.button {
 
 
 /* About page */
-
-/* 
-* Code for styling the text and image in the about us page adapted from 
-* https://youtu.be/S0a7PEOi0do
-* Accessed: March 3, 2022 
-*/
 
 .about-us {
     display: flex;
@@ -491,12 +471,6 @@ input[type="submit"]:hover {
 
 /* Tab feature */
 
-/*
-*   Code for tab feature adapted from 
-*   https://www.w3schools.com/howto/howto_js_tabs.asp
-*   Accessed: March 9, 2022
-*/
-
 /* Styling header with buttons*/
 .tab-header {
     overflow: hidden;
@@ -549,11 +523,6 @@ input[type="submit"]:hover {
 
 /* Table for mobile */
 
-/* 
-* Code for styling the table for mobile copied from 
-* https://www.studytonight.com/post/how-to-make-table-horizontally-scrollable-for-small-screen-size
-* Accessed: Mar 2, 2022 
-*/
 @media (max-width: 600px) {
     .table-mobile {
         overflow-x: scroll;
@@ -588,12 +557,6 @@ input[type="submit"]:hover {
     padding-bottom: 0;
 }
 
-/* 
-* Code for styling the sticky sidemenu adapted from 
-* https://dev.to/clairecodes/how-to-make-a-sticky-sidebar-with-two-lines-of-css-2ki7
-* Accessed: Mar 7, 2022 
-*/
-
 .stock-content {
     display: flex;
     justify-content: space-between;
@@ -619,6 +582,7 @@ input[type="submit"]:hover {
     position: sticky;
     top: 0;
     height: 16em;
+    /* height: 80%; */
     padding-top: 0;
     min-width: 10em;
     text-align: center;
@@ -660,12 +624,6 @@ input[type="submit"]:hover {
         flex: 1;
     }
 }
-
-/* 
-* Code for styling the tooltips adapted from 
-* https://www.w3schools.com/css/css_tooltip.asp
-* Accessed: Mar 7, 2022 
-*/
 
 .tooltip {
     position: relative;
@@ -735,13 +693,6 @@ input[type="submit"]:hover {
     text-align: left;
 } 
 
-/* 
-* Code for styling child <a> of reference-section class adapted from 
-* https://speckyboy.com/creative-hyperlinks-css-javascript/
-* example #3 coming up short
-* Accessed: Mar 8, 2022 
-*/
-
 .reference-section a {
     text-decoration: none;
     color: var(--clr-accent);
@@ -789,4 +740,34 @@ input[type="submit"]:hover {
     width: 2rem;
     height: 2rem;
     color: #74caff;
+}
+
+
+/* Stock charts */
+
+.stockchart-wrapper {
+    padding: 2em;
+    padding-bottom: 1em;
+    height: 600px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .stockchart-wrapper {
+        height: 400px;
+    }
+}
+
+.stockchart-wrapper.indexchart-wrapper {
+    padding: 0;
+    padding-bottom: 2em;
+}
+
+
+/* Twitter embedded timeline */
+
+.twitter-wrapper {
+    padding-top: 3em;
+    padding-bottom: 0;
+    text-align: center;
 }

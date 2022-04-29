@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?"/>
         <title>About Stockhome</title>
 
         <!-- Fonts -->
@@ -18,17 +19,21 @@
         <!-- Animsition page transition -->
         <link rel="stylesheet" href="./scripts/animsition/animsition.min.css">
         
+        <!-- Emailjs service for contact form -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/integration
+                emailjs.init('WIlIc1NcLiLjSMU4y');
+            })();
+        </script>
+
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body class="animsition">
         <!-- Navigation bar -->
 
-        <!-- 
-            Code for navbar adapted from 
-            https://youtu.be/gXkqy0b4M5g
-            Accessed: Feb 28, 2022
-        -->
         <nav>
             <div class="logo-container">
                 <div class="logo-image">
@@ -74,7 +79,7 @@
                     <p class="text-content">We are helping investors – young or experienced – build their personal wealth. Offering up-to-date information and statistics about the latest stocks, Stockhome helps you keep track of how the market is doing. We also aim to educate young investors – who are just getting started or hope to – about the different aspects of investing.</p>
                 </div>
                 <div class="about-img">
-                    <img src="./images/about.jpg">
+                    <img src="./images/about.jpg" alt="Image of stock going up in value">
                 </div>
             </section>
 
@@ -82,7 +87,9 @@
             <section class="contact-form-container">
                 <h2 class="contact-header">Contact Us</h2>
                 <div class="contact-form">
-                    <form onsubmit="event.preventDefault(); validateForm()">
+                    <form id="contact-form">
+                        <input type="hidden" name="case_number">
+
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" placeholder="Your name">
                         <small class="error"></small>
@@ -96,7 +103,7 @@
                         <small class="error"></small>
 
                         <label for="message">Message:</label>
-                        <textarea id="message" placeholder="Your message"></textarea>
+                        <textarea id="message" name="message" placeholder="Your message"></textarea>
                         <small class="error"></small>
 
                         <div class="center">
@@ -130,7 +137,7 @@
             <div id="share"></div>
             <div class="footer-para">
                 <p>Author: Andrei Albu</p>
-                <p>Last modification made on March 31, 2022</p>
+                <p>Last modification made on April 29, 2022</p>
             </div>
             <a href="./references.html">References</a>
         </footer>
