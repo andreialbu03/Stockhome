@@ -1,10 +1,3 @@
-/* 
-* UNIT 4 WORK
-* Code for animating the navbar copied from 
-* https://youtu.be/gXkqy0b4M5g
-* Accessed: Mar 10, 2022 
-*/
-
 // Anonymous function
 const navSlide = () => {
 

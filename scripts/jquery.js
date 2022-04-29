@@ -1,5 +1,3 @@
-/* UNIT 6 WORK */
-
 // Run code once DOM is fully loaded, ready method is deprecated
 jQuery(function() {
 
@@ -58,12 +56,6 @@ jQuery(function() {
     $('.scroll-top').on('click', function() {
         $('html, body').animate({scrollTop : 0}, 500);
     });
-
-    /* 
-    * Code for the page transitions plugin Animsition, copied from 
-    * https://git.blivesta.com/animsition/fade/
-    * Accessed: April 1, 2022 
-    */
 
     $(".animsition").animsition({
         inClass: 'fade-in',

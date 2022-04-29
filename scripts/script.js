@@ -1,6 +1,3 @@
-/* UNIT 5 WORK */
-
-
 // TAB FEATURE FOR THE LEARN PAGE
 
 // Function for the tab feature on the Learn Page
@@ -189,11 +186,7 @@ function validateForm(event)
         // Generate a random five digit number as the case number, used for the case_number variable
         this.case_number.value = Math.random() * 100000 | 0;
 
-        /*
-        * Code for send email to emailjs service adapted from
-        * https://www.emailjs.com/docs/tutorial/creating-email-template/
-        * Accessed on: Apr 5, 2022
-        */
+        // Send the email
         emailjs.sendForm('service_97tvjxb', 'contact_form', this)
             .then(function() {
                 console.log('SUCCESS! Email sent.');
