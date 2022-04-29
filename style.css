@@ -158,6 +158,11 @@ nav {
     font-weight: bold;
 }
 
+.nav-links a:hover {
+    color: var(--clr-accent);
+    text-shadow: 0 0 1px;
+}
+
 .burger {
     display: none;
     cursor: pointer;
